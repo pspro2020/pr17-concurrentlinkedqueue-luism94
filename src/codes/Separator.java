@@ -31,7 +31,7 @@ public class Separator implements Runnable {
 	public void run() {
 		// Se ejecuta el hilo mientras no sea interrumpido y mientras su cinta no esta
 		// vacia
-		while (!Thread.currentThread().isInterrupted() && !separatorBelt.isEmpty()) {
+		while (!Thread.currentThread().isInterrupted() && (separatorBelt.peek() != null)) {
 			// Despues de que las tolvas se inicien a la vez la separadora espera 3 segundos
 			// antes de empezar a trabajar
 			try {

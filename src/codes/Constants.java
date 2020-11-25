@@ -23,5 +23,6 @@ public class Constants {
 	static final int SEPARATOR_START_WAITING_TIME = 3;
 	static final String HOPPER_START = "Time %s: Hopper %d has started";
 	static final String SEPARATOR_START = "Time %s: Separator has started";
+	static final String HOPPER_DROPS_ITEM = "Time %s: Dropped item %d from hopper %d";
 
 }

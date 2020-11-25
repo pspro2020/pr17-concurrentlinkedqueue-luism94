@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Hopper implements Runnable {
 
-	private Random rndmGenerator;
+	private Random rndmGenerator = new Random();
 	private LinkedList<Item> itemList = new LinkedList<Item>();
 	private int hopperNumber;
 	private Separator separator;
@@ -29,6 +29,7 @@ public class Hopper implements Runnable {
 	}
 
 	private Item dropItem() throws InterruptedException {
+		System.out.println(String.format(Constants.HOPPER_DROPS_ITEM, LocalDateTime.now().format(Constants.TIME_FORMATTER), itemList.element().getItemNumber(), itemList.element().getHopperNumber()));
 		return itemList.removeFirst();
 	}
 
